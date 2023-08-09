@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CredAuthentifi</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/toastr.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/flat-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/toastr.min.css" rel="stylesheet" />
+    <link href="css/ip2location-image-sprite.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/1.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <video src="video/1.mp4" class="vid-bg" autoplay loop muted></video>
+
+    <div>
+      <header>
+        <h2 class="head1" style="color: #e20d49">
+          <i>CREDENTIALS IDENTIFICATION SYSTEM </i>
+        </h2>
+
+        <!-- <a class="cta" href="#">Contact</a> -->
+      </header>
+
+      <div class="col-lg-12">
+        <div class="col-lg-6">
+           <button type="button" id="token_balance" class="btn btn-info mb-2" style="margin:10px">Cred Coin Balance</button>  
+           <h1 id="cred_balance" class="btn btn-info mb-2" style="font-size:30px; display: inline-block ;background: rgba(0, 0, 0, 0.07)"></h1>   
+        </div>
+      </div>
+
+      <div>
+        <div class="windowbox">
+          <div class="col-lg-10 windowbox">
+            <div class="head">
+              <h1 class="logo" style="color: #e20d49"><i>REGISTRATION</i></h1>
+            </div>
+
+            <!-- Register User -->
+            <div class="reglayout">
+              <!-- <div class="form-group "> -->
+              <div class="first-second">
+                <h1
+                  id="user_reg"
+                  style="
+                    font-size: 40px;
+                    font-weight: 200;
+                    text-decoration: underline;
+                  "
+                >
+                  User Registration
+                </h1>
+              </div>
+              <div class="form-group">
+                <label
+                  for="userIdentity"
+                  style="font-size: 30px; padding-top: 2%"
+                  >Address:</label
+                >
+                <input
+                  type="text"
+                  id="userIdentity"
+                  name="userIdentity"
+                  class="inputbox1"
+                /><br /><br />
+              </div>
+              <div class="form-group" style="text-align: center">
+                <button
+                  type="button"
+                  id="userReg"
+                  class="btn btn-info mb-2 buttonanim"
+                >
+                  Register User
+                </button>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <!-- Unregister User -->
+            <div class="reglayout">
+              <!-- <div class="form-group "> -->
+              <div class="first-second">
+                <h1
+                  id="unregister"
+                  style="
+                    font-size: 40px;
+                    font-weight: 200;
+                    text-decoration: underline;
+                  "
+                >
+                  Unregister
+                </h1>
+              </div>
+              <div class="form-group">
+                <label
+                  for="cenIdentity"
+                  style="font-size: 30px; padding-top: 2%"
+                  >Address:</label
+                >
+                <input
+                  type="text"
+                  id="cenIdentity"
+                  name="cenIdentity"
+                  class="inputbox1"
+                /><br /><br />
+              </div>
+              <div class="form-group" style="text-align: center">
+                <button
+                  type="button"
+                  id="unRegister"
+                  class="btn btn-info mb-2 buttonanim"
+                >
+                  Unregister
+                </button>
+                <h1 id="unRegister"></h1>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+
+            <!-- Register Vendor -->
+            <div class="reglayout">
+              <!-- <div class="form-group "> -->
+              <div class="first-second">
+                <h1 id="vend_reg" style="font-size: 40px; font-weight: 200;text-decoration: underline;">
+                  Vendor Registration
+                </h1>
+              </div>
+
+              <div class="form-group">
+                <label for="vendorIdentity" style="font-size: 30px; padding-top: 2%">Address:</label>
+                <input
+                  type="text"
+                  id="vendorIdentity"
+                  name="vendorIdentity"
+                  class="inputbox1"
+                /><br /><br />
+              </div>
+              <div class="form-group" style="text-align: center">
+                <button
+                  type="button"
+                  id="vendorReg"
+                  class="btn btn-info mb-2 buttonanim"
+                >
+                  Register Vendor
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+
+        <div class="windowbox">
+          <div class="col-lg-10 windowbox">
+            <div class="head">
+              <h1 class="logo" style="color: #e20d49">ADD CREDENCE</h1>
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-address-book-o icon"></i>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="form-control"
+                placeholder="Address example: 0x1eB78EfB8a11dedF61849C355287B1F6158108bC "
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-hourglass-start icon"></i>
+              <input
+                type="text"
+                id="status"
+                name="status"
+                class="form-control"
+                placeholder=" Status: Valid / Invalid"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-university icon"></i>
+              <input
+                type="text"
+                id="university"
+                name="university"
+                class="form-control"
+                placeholder="University name"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-map-o icon"></i>
+              <input
+                type="text"
+                id="zipcode"
+                name="zipcode"
+                class="form-control"
+                placeholder=" Zip code"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-calendar-check-o icon"></i>
+              <input
+                type="text"
+                id="issue_date"
+                name="issue_date"
+                class="form-control"
+                placeholder="Issue Date of certificate"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-calendar-times-o icon"></i>
+              <input
+                type="text"
+                id="expiry_date"
+                name="expiry_date"
+                class="form-control"
+                placeholder="Expiry date of certificate"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-id-card-o icon"></i>
+              <input
+                type="text"
+                id="credential_id"
+                name="credential_id"
+                class="form-control"
+                placeholder="Credential ID :"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input
+                type="text"
+                id="credential_title"
+                name="credential_title"
+                class="form-control"
+                placeholder="Credential Title :"
+              /><br /><br />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input
+                type="text"
+                id="issued_to"
+                name="issued_to"
+                class="form-control"
+                placeholder="Name of the person issued to"
+              /><br /><br />
+            </div>
+
+            <br /><br /><br />
+            <div class="form-group" style="text-align: center">
+              <button
+                type="button"
+                id="addCredential"
+                class="btn btn-info mb-2 buttonanim"
+              >
+                Add Credential
+              </button>
+            </div>
+          </div>
+        </div>
+        <br /><br /><br />
+
+        <div class="windowbox">
+          <div class="col-lg-10 windowbox">
+            <div class="head">
+              <h1 class="logo" style="color: #e20d49">CREDENCE DETAILS</h1>
+              <br />
+            </div>
+            <label for="cred_address" style="font-size: 30px">Address: </label>
+            <input
+              type="text"
+              id="cred_address"
+              name="cred_address"
+              class="inputbox1"
+            /><br /><br /><br />
+            <div class="form-group" style="text-align: center">
+              <button
+                type="button"
+                id="getCredential"
+                class="btn btn-info mb-2 buttonanim"
+                style="margin: 10px"
+              >
+                Pay and Get Credential Details
+              </button>
+            </div>
+            <div>
+              <br />
+              <h1
+                id="issue_1"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <br />
+              <h1
+                id="status_1"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <br />
+              <h1
+                id="university_1"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <br />
+              <h1
+                id="issue_date_1"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <br />
+              <h1
+                id="expiry_date_1"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <br />
+              <h1
+                id="credential_title_1"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <br />
+            </div>
+          </div>
+        </div>
+
+        <div class="windowbox">
+          <div class="col-lg-10 windowbox">
+            <div class="head">
+              <h1 class="logo" style="color: #e20d49">VALIDATIONS</h1>
+            </div>
+            <label for="valid_address" style="font-size: 30px">Address: </label>
+            <input
+              type="text"
+              id="validateAddress"
+              name="validateAddress"
+              class="inputbox1"
+            /><br /><br /><br />
+            <div class="form-group" style="text-align: center">
+              <button
+                type="button"
+                id="validateCredential"
+                class="btn btn-info mb-2 buttonanim"
+                style="margin: 10px"
+              >
+                Pay and Validate
+              </button>
+            </div>
+            <div>
+              <h1
+                id="status_2"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+              <h1
+                id="expiry_date_2"
+                style="font-size: 30px; display: inline-block"
+              ></h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Starts -->
+
+        <div class="windowbox">
+          <div class="col-lg-10 windowbox">
+            <div class="head">
+              <h1 class="logo" style="color: #e20d49">Transfer CRED Coins</h1>
+            </div>
+
+            <label for="beneficiary_address" style="font-size: 30px">Beneficiary Address: </label>
+            <input type="text" id="beneficiary_address" name="beneficiary_address" class="inputbox1"/>
+            
+            <br />
+            <br />
+            <br />
+
+            <label for="tokens_amount" style="font-size: 30px">Tokens : </label>
+            <input type="text" id="tokens_amount" name="tokens_amount" class="inputbox1"/>
+
+            <br />
+            <br />
+            <br />
+
+            <div class="form-group" style="text-align: center">
+              <button type="button" id="transferTokens" class="btn btn-info mb-2 buttonanim" style="margin: 10px">
+                Transfer Tokens
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- End -->
+      </div>
+    </div>
+  </body>
+  <script src="js/toastr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+  <script src="js/app.js"></script>
+</html>
