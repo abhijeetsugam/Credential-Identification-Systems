@@ -2,7 +2,7 @@
  
 pragma solidity ^0.8.13;
 
-//import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract CredAuth
 {
@@ -26,7 +26,7 @@ contract CredAuth
 
     IERC20 private _token;
 
-modifier onlyChairperson
+    modifier onlyChairperson
     {
         require(msg.sender == chairperson);
         _;
@@ -115,4 +115,3 @@ modifier onlyChairperson
    // 0x493601032922e9E17c1a0205af49532904783336,"Valid","California State University, California, USA","14214","28 October 2022","28 October 2024","CSE574","Intro to Machine Learning","Victor Kumar Vats"
 }
  
-    
